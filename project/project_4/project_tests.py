@@ -48,10 +48,10 @@ def test_fit_pca(fn):
 
         assert_structure(fn_return_value, fn_correct_values['PCA'], 'PCA')
 
-        try:
-            fn_return_value.fit.assert_called()
-        except AssertionError:
-            raise Exception('Test Failure: PCA.fit not called')
+        # try:
+        #     fn_return_value.fit.assert_called()
+        # except AssertionError:
+        #     raise Exception('Test Failure: PCA.fit not called')
 
         try:
             fn_return_value.fit.assert_called_with(self=fn_return_value, X=fn_inputs['returns'])
